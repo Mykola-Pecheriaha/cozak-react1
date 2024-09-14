@@ -1,0 +1,18 @@
+.menu {
+  margin: 20px 0;
+}
+
+.menuButton {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+}
+
+.menuLink {
+  text-decoration: none;
+  color: black;
+}
