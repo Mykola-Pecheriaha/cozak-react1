@@ -1,20 +1,33 @@
-/* ConsultationDetailsPage.module.css */
-.container {
+.detailsContainer {
   padding: 20px;
 }
 
 .title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .description {
-  margin-top: 10px;
-  font-size: 16px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .image {
   max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.backLink {
+  display: inline-block;
   margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.backLink:hover {
+  background-color: #0056b3;
 }

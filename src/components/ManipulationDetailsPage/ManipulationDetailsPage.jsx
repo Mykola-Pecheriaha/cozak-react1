@@ -12,15 +12,17 @@ const ManipulationDetailsPage = () => {
 
   if (!manipulation) {
     return (
-      <div className={styles.container}>
+      <div>
         <h2>Маніпуляцію не знайдено.</h2>
-        <Link to="/manipulations">Повернутися до маніпуляцій</Link>
+        <Link to="/" className={styles.backLink}>
+          Повернутися на головну
+        </Link>
       </div>
     )
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.detailsContainer}>
       <h1 className={styles.title}>{manipulation.title}</h1>
       <p className={styles.description}>{manipulation.description}</p>
       {manipulation.image && (
@@ -31,7 +33,9 @@ const ManipulationDetailsPage = () => {
         />
       )}
       <br />
-      <Link to="/manipulations">Повернутися до маніпуляцій</Link>
+      <Link to="/" className={styles.backLink}>
+        Повернутися на головну
+      </Link>
     </div>
   )
 }

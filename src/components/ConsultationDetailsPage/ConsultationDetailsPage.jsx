@@ -12,15 +12,17 @@ const ConsultationDetailsPage = () => {
 
   if (!consultation) {
     return (
-      <div className={styles.container}>
+      <div>
         <h2>Консультацію не знайдено.</h2>
-        <Link to="/consultations">Повернутися до консультацій</Link>
+        <Link to="/" className={styles.backLink}>
+          Повернутися на головну
+        </Link>
       </div>
     )
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.detailsContainer}>
       <h1 className={styles.title}>{consultation.title}</h1>
       <p className={styles.description}>{consultation.description}</p>
       {consultation.image && (
@@ -31,7 +33,9 @@ const ConsultationDetailsPage = () => {
         />
       )}
       <br />
-      <Link to="/consultations">Повернутися до консультацій</Link>
+      <Link to="/" className={styles.backLink}>
+        Повернутися на головну
+      </Link>
     </div>
   )
 }

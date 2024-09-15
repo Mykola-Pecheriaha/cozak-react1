@@ -4,17 +4,15 @@ import styles from './Banner.module.css'
 
 const Banner = () => {
   return (
-    <div className={styles.banner}>
+    <div className={styles.bannerContainer}>
       <img
-        src="/path-to-doctor/doctor.jpg"
+        src="/path-to-doctor-photo.jpg"
         alt="Doctor"
-        className={styles.doctorImage}
+        className={styles.bannerImage}
       />
-      <h2>Dr. Ім'я Лікаря</h2>
-      <Link to="/portfolio">
-        <button className={styles.portfolioButton}>
-          Переглянути портфоліо
-        </button>
+      <br />
+      <Link to="/portfolio" className={styles.bannerButton}>
+        Перейти до портфоліо
       </Link>
     </div>
   )

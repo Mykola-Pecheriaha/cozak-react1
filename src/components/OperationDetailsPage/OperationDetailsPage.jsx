@@ -1,7 +1,7 @@
 import React from 'react'
-import { useParams, Link } from 'react-router-dom'
-import styles from './OperationDetailsPage.module.css'
+import { Link, useParams } from 'react-router-dom'
 import operationsData from '../../data/operationsData'
+import styles from './OperationDetailsPage.module.css'
 
 const OperationDetailsPage = () => {
   const { operationTitle } = useParams()
@@ -14,23 +14,27 @@ const OperationDetailsPage = () => {
     return (
       <div>
         <h2>Операцію не знайдено.</h2>
-        <Link to="/">Повернутися на головну</Link>
+        <Link to="/" className={styles.backLink}>
+          Повернутися на головну
+        </Link>
       </div>
     )
   }
 
   return (
-    <div className={styles.detailsPage}>
-      <h1>{operation.title}</h1>
-      <p>{operation.description}</p>
+    <div className={styles.detailsContainer}>
+      <h1 className={styles.title}>{operation.title}</h1>
+      <p className={styles.description}>{operation.description}</p>
       {operation.image && (
         <img
           src={operation.image}
           alt={operation.title}
-          className={styles.operationImage}
+          className={styles.image}
         />
       )}
-      <Link to="/">Повернутися на головну</Link>
+      <Link to="/" className={styles.backLink}>
+        Повернутися на головну
+      </Link>
     </div>
   )
 }
