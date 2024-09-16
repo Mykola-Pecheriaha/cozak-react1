@@ -1,13 +1,55 @@
 .bannerContainer {
-  text-align: center;
-  padding: 40px 0;
+  display: flex;
+  justify-content: space-between; /* Дві частини: текст і зображення */
+  align-items: center;
+  width: 95%; /* Банер займає 90% ширини сторінки */
+  margin: 0 auto; /* Вирівнювання банера по центру сторінки */
+  padding: 20px;
   background-color: #f8f9fa;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Легка тінь для банера */
+  gap: 40px; /* Проміжок між текстом і зображенням */
+}
+
+.bannerText {
+  flex: 1; /* Текст займає 50% банера */
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Ледь помітна рамка */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тінь */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація для збільшення тексту та тіні */
+  font-size: 1.2rem; /* Збільшення розміру тексту */
+}
+
+.bannerText h2 {
+  font-size: 2.5rem; /* Збільшений заголовок */
+  margin-bottom: 10px;
+}
+
+.bannerText p {
+  font-size: 1.5rem; /* Збільшений текст */
+  margin-bottom: 10px;
+  color: #333;
+}
+.bannerText ul {
+  margin-top: 10px;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.bannerText li {
+  font-size: 1.2rem; /* Збільшення розміру пунктів списку */
+  margin-bottom: 5px;
+}
+
+.bannerText:hover {
+  transform: scale(1.05); /* Ефект збільшення при наведенні */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Збільшена тінь при наведенні */
 }
 
 .bannerImage {
-  max-width: 200px;
-  border-radius: 50%;
-  margin-bottom: 20px;
+  flex: 1; /* Зображення займає 50% банера */
+  max-width: 100%; /* Вписати зображення у свою половину */
+  height: auto;
+  border-radius: 2%; /* Округлі кути зображення */
 }
 
 .bannerButton {

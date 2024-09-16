@@ -3,11 +3,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #343a40;
+  background-color: #767779;
+}
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
   max-height: 50px;
+  margin-right: 10px;
+}
+
+.logo p {
+  margin: 0;
 }
 
 .nav {

@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
+import logo from '../../assets/images/logo2.jpg'
 
 const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src="/path-to-logo/logo.png" alt="Logo" />
+        <img src={logo} alt="Logo" />
+        <p>PlastikP</p>
       </div>
       <nav className={styles.nav}>
         <Link to="/consultations" className={styles.navLink}>

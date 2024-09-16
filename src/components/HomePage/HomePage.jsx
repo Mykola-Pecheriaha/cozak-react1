@@ -15,17 +15,17 @@ const HomePage = () => {
       </div>
 
       <div className={styles.buttonGroup}>
-        <Link to="/consultations" className={styles.homeButton}>
+        {/* <Link to="/consultations" className={styles.homeButton}>
           Консультація
-        </Link>
+        </Link> */}
 
-        <Link to="/manipulations" className={styles.homeButton}>
+        {/* <Link to="/manipulations" className={styles.homeButton}>
           Маніпуляція
-        </Link>
+        </Link> */}
 
-        <Link to="/operations" className={styles.homeButton}>
+        {/* <Link to="/operations" className={styles.homeButton}>
           Операція
-        </Link>
+        </Link> */}
       </div>
 
       <Link to="/portfolio" className={styles.portfolioButton}>
