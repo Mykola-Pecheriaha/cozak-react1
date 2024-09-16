@@ -11,6 +11,10 @@ const Header = () => {
         <p>PlastikP</p>
       </div>
       <nav className={styles.nav}>
+        <Link to="/" className={styles.navLink}>
+          Головна
+        </Link>
+
         <Link to="/consultations" className={styles.navLink}>
           Консультація
         </Link>

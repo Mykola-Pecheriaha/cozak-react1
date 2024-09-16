@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './HomePage.module.css'
 import Banner from '../Banner/Banner'
+import BreastSurgerySection from '../BreastSurgerySection/BreastSurgerySection'
 
 const HomePage = () => {
   return (
@@ -14,23 +15,13 @@ const HomePage = () => {
         <Banner />
       </div>
 
-      <div className={styles.buttonGroup}>
-        {/* <Link to="/consultations" className={styles.homeButton}>
-          Консультація
-        </Link> */}
-
-        {/* <Link to="/manipulations" className={styles.homeButton}>
-          Маніпуляція
-        </Link> */}
-
-        {/* <Link to="/operations" className={styles.homeButton}>
-          Операція
-        </Link> */}
-      </div>
+      {/* <div className={styles.buttonGroup}></div> */}
 
       <Link to="/portfolio" className={styles.portfolioButton}>
         Перейти до портфоліо
       </Link>
+
+      <BreastSurgerySection />
     </div>
   )
 }
