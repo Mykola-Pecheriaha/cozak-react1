@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './HomePage.module.css'
 import Banner from '../Banner/Banner'
-import BreastSurgerySection from '../BreastSurgerySection/BreastSurgerySection'
+import BreastSurgerySection from '../Sections/BreastSurgerySection/BreastSurgerySection'
+import BodySurgerySection from '../Sections/BodySurgerySection/BodySurgerySection'
 
 const HomePage = () => {
   return (
@@ -22,6 +23,8 @@ const HomePage = () => {
       </Link>
 
       <BreastSurgerySection />
+
+      <BodySurgerySection />
     </div>
   )
 }

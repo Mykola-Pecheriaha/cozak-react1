@@ -2,7 +2,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './BreastSurgerySection.module.css'
-import mammoplastyc from '../../assets/images/1mammoplasty.jpg'
+import mammoplastyc from '../../../assets/images/1mammoplasty.jpg'
 
 const BreastSurgerySection = () => {
   return (
