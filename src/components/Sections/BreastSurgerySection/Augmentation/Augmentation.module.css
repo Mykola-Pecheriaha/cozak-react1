@@ -1,0 +1,256 @@
+.augmentationContainer {
+  width: 100%;
+  margin: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+
+li {
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+
+/* Стиль для секцій з текстом і зображенням */
+.augmentationContainer,
+.sectionConsultation,
+.sectionPreparation,
+.sectionSurgery,
+.sectionReabilitation,
+.sectionResults {
+  margin-bottom: 40px;
+}
+.sectionAugmentalis {
+  /* background-color: #f0dfdf; */
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.textTitle {
+  flex: 1;
+  padding: 20px;
+  background-color: rgb(240, 241, 217);
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Ледь помітна рамка */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тінь */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація для збільшення тексту та тіні */
+  font-size: 1.2rem; /* Збільшення розміру тексту */
+  overflow: hidden; /* Запобігання перекриванню тексту */
+}
+
+.textTitle:hover {
+  transform: scale(1.05); /* Ефект збільшення при наведенні */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Збільшена тінь при наведенні */
+}
+
+.imgTitle {
+  flex: 1; /* Зображення займає 50% банера */
+  max-width: 100%; /* Вписати зображення у свою половину */
+  height: auto;
+  border-radius: 2%; /* Округлі кути зображення */
+}
+
+.imgTitle:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sectionConsultation {
+  gap: 40px; /* Простір між двома колонками */
+  margin-bottom: 40px;
+}
+
+.consultationContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px; /* Простір між двома колонками */
+  overflow: hidden; /* Запобігання виходу елементів за межі контейнера */
+}
+
+.consultationText {
+  flex: 1;
+  padding: 20px;
+  background-color: rgb(246, 248, 197);
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Ледь помітна рамка */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тінь */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація для збільшення тексту та тіні */
+  font-size: 1.2rem; /* Збільшення розміру тексту */
+  overflow: hidden; /* Запобігання перекриванню тексту */
+}
+
+.consultationText:hover {
+  transform: scale(1.05); /* Ефект збільшення при наведенні */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Збільшена тінь при наведенні */
+}
+
+.consultationImage {
+  flex: 1; /* Зображення займає 50% банера */
+  display: flex;
+  max-width: 100%; /* Вписати зображення у свою половину */
+  justify-content: center;
+  align-items: center;
+}
+
+.consultationImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Запобігання виходу зображення */
+}
+
+.consultationImage:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Контейнер секції, що ділить на дві рівні частини */
+
+.preparationContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Простір між двома колонками */
+}
+
+/* Стилі для тексту */
+.preparationText {
+  flex: 1; /* Текст займає половину ширини */
+  padding: 20px;
+  background-color: rgb(240, 241, 217);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem;
+  overflow: hidden; /* Запобігання перекриванню тексту */
+  /* list-style: none; Прибираємо крапки зі списку */
+  padding-left: 0;
+}
+
+.preparationText li {
+  margin-bottom: 8px;
+}
+
+/* Стиль для виділення першого пункту */
+.highlightedStep {
+  font-size: 1.5em; /* Збільшений розмір шрифту */
+  font-weight: bold; /* Жирний текст */
+  color: #2c3e50; /* Виберіть бажаний колір */
+  margin-bottom: 10px; /* Відступ після заголовка */
+  text-decoration: none;
+}
+
+.preparationText {
+  padding-left: 20px;
+}
+
+.preparationText div {
+  margin-bottom: 8px;
+}
+
+.highlightedStep {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Стилі для зображення */
+.preparationImage {
+  flex: 1; /* Зображення займає половину ширини */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preparationImage img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover; /* Зберігає пропорції, щоб заповнити контейнер */
+  border-radius: 2%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Запобігання виходу зображення */
+}
+
+.preparationText:hover,
+.preparationImage img:hover {
+  transform: scale(1.1); /* Ефект збільшення */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Тінь при наведенні */
+}
+
+.sectionAugmentalis,
+.consultationContainer,
+.preparationContainer,
+.surgeryContainer,
+.rehabilitationContainer,
+.resultsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Текст займає 48% ширини */
+.textTitle,
+.consultationText,
+.preparationText,
+.surgeryText,
+.rehabilitationText,
+.resultsText {
+  width: 48%;
+  margin-right: 2%;
+}
+
+/* Зображення також займає 48% ширини */
+.imgTitle img,
+.consultationImage img,
+.preparationImage img,
+.surgeryImage img,
+.rehabilitationImage img,
+.resultsImage img {
+  width: 48%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Список пунктів для підготовки і реабілітації */
+.preparationText ul,
+.rehabilitationText ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Для мобільних пристроїв текст і зображення один під одним */
+@media (max-width: 768px) {
+  .sectionAugmentalis,
+  .consultationContainer,
+  .preparationContainer,
+  .surgeryContainer,
+  .rehabilitationContainer,
+  .resultsContainer {
+    flex-direction: column;
+  }
+
+  .textTitle,
+  .imgTitle img,
+  .consultationText,
+  .consultationImage img,
+  .preparationText,
+  .preparationImage img,
+  .surgeryText,
+  .surgeryImage img,
+  .rehabilitationText,
+  .rehabilitationImage img,
+  .resultsText,
+  .resultsImage img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

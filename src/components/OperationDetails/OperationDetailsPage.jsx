@@ -6,8 +6,10 @@ import styles from './OperationDetailsPage.module.css'
 const OperationDetailsPage = () => {
   const { operationTitle } = useParams()
   const decodedTitle = decodeURIComponent(operationTitle)
+
+  // Пошук операції, порівнюючи заголовки операцій
   const operation = operationsData.operations.find(
-    (op) => op.title === decodedTitle
+    (op) => op.title.toLowerCase() === decodedTitle.toLowerCase()
   )
 
   if (!operation) {

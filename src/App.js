@@ -1,8 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './components/Header/Header'
-// import Banner from './components/Banner/Banner';
-
 import HomePage from './components/HomePage/HomePage'
 import DoctorPortfolio from './components/DoctorPortfolio/DoctorPortfolio'
 import OperationDetailsPage from './components/OperationDetails/OperationDetailsPage.jsx'
@@ -19,12 +17,12 @@ import Abdominoplasty from './components/OperationDetails/Abdominoplasty.jsx'
 import Liposuction from './components/OperationDetails/Liposuction.jsx'
 import GlutealProsthetics from './components/OperationDetails/GlutealProsthetics.jsx'
 import ScarCorrection from './components/OperationDetails/ScarCorrection.jsx'
+import Augmentation from './components/Sections/BreastSurgerySection/Augmentation/Augmentation.jsx' // Додано новий компонент
 
 const App = () => {
   return (
     <Router>
       <Header />
-      {/* <Banner /> */}
       <Routes>
         {/* Головна сторінка */}
         <Route path="/" element={<HomePage />} />
@@ -65,6 +63,9 @@ const App = () => {
           element={<GlutealProsthetics />}
         />
         <Route path="/operation/scar-correction" element={<ScarCorrection />} />
+
+        {/* Новий маршрут для Augmentation */}
+        <Route path="/operation/augmentation" element={<Augmentation />} />
       </Routes>
     </Router>
   )

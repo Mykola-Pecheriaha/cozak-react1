@@ -21,19 +21,31 @@ const BreastSurgerySection = () => {
         </p>
         <ul className={styles.operationsList}>
           <li>
-            <Link to="/operation/augmentation">Збільшення грудей</Link>
+            <Link to={`/operation/${encodeURIComponent('augmentation')}`}>
+              Збільшення грудей
+            </Link>
           </li>
           <li>
-            <Link to="/operation/reduction">Зменшення грудей</Link>
+            <Link to={`/operation/${encodeURIComponent('reduction')}`}>
+              Зменшення грудей
+            </Link>
           </li>
           <li>
-            <Link to="/operation/lift">Підтяжка грудей</Link>
+            <Link to={`/operation/${encodeURIComponent('lift')}`}>
+              Підтяжка грудей
+            </Link>
           </li>
           <li>
-            <Link to="/operation/Gynecomastia">Видалення гінекомастії</Link>
+            <Link to={`/operation/${encodeURIComponent('Gynecomastia')}`}>
+              Видалення гінекомастії
+            </Link>
           </li>
           <li>
-            <Link to="/operation/areola and nipple correction">
+            <Link
+              to={`/operation/${encodeURIComponent(
+                'areola and nipple correction'
+              )}`}
+            >
               Корекція ареоли та соска молочної залози
             </Link>
           </li>
