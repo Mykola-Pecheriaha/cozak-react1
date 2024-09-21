@@ -125,9 +125,6 @@ const Augmentation = () => {
       <section className={styles.sectionReabilitation}>
         <h2>{augmentation.rehabilitation.title}</h2>
         <div className={styles.rehabilitationContainer}>
-          <div className={styles.rehabilitationImage}>
-            <img src={augmentation.rehabilitation.image} alt="" />
-          </div>
           <div className={styles.rehabilitationText}>
             <ul>
               {augmentation.rehabilitation.steps.map((step, index) => (
@@ -135,17 +132,21 @@ const Augmentation = () => {
               ))}
             </ul>
           </div>
+
+          <div className={styles.rehabilitationImage}>
+            <img src={augmentation.rehabilitation.image} alt="" />
+          </div>
         </div>
       </section>
 
       <section className={styles.sectionResults}>
         <h2>{augmentation.results.title}</h2>
         <div className={styles.resultsContainer}>
-          <div className={styles.resultsText}>
-            <p>{augmentation.results.description}</p>
-          </div>
           <div className={styles.resultsImage}>
             <img src={augmentation.results.image} alt="" />
+          </div>
+          <div className={styles.resultsText}>
+            <p>{augmentation.results.description}</p>
           </div>
         </div>
       </section>

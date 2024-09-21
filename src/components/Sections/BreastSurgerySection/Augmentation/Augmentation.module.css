@@ -113,6 +113,8 @@ li {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/*Підготовка*/
+
 /* Контейнер секції, що ділить на дві рівні частини */
 
 .preparationContainer {
@@ -300,6 +302,7 @@ li {
 }
 
 /* Стилі для секції реабілітації */
+
 .sectionReabilitation {
   position: relative;
   z-index: 1;
@@ -312,13 +315,133 @@ li {
   gap: 20px;
 }
 
+/* Стиль для виділення першого пункту */
+.highlightedStep {
+  font-size: 1.5em; /* Збільшений розмір шрифту */
+  font-weight: bold; /* Жирний текст */
+  color: #2c3e50; /* Виберіть бажаний колір */
+  margin-bottom: 10px; /* Відступ після заголовка */
+  text-decoration: none;
+}
+
 /* Уникаємо перекриття секцій при наведенні */
 .sectionSurgery:hover {
   z-index: 5;
 }
 
-.sectionReabilitation:hover {
-  z-index: 6;
+/* Стилі для тексту */
+.rehabilitationText {
+  flex: 1; /* Текст займає половину ширини */
+  padding: 20px;
+  background-color: rgb(217, 237, 241);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem;
+  overflow: hidden; /* Запобігання перекриванню тексту */
+  /* list-style: none; Прибираємо крапки зі списку */
+  padding-left: 0;
+}
+
+.rehabilitationText {
+  padding-left: 20px;
+}
+.rehabilitationText div {
+  margin-bottom: 8px;
+}
+.rehabilitationText {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Стилі для зображення */
+.rehabilitationImage {
+  flex: 1; /* Зображення займає половину ширини контейнера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%; /* Максимальна ширина зображення становить 50% сторінки */
+}
+
+.rehabilitationImage img {
+  width: 100%; /* Зображення заповнює весь контейнер */
+  height: auto; /* Зберігає пропорції зображення */
+  object-fit: cover; /* Зберігає пропорції і заповнює контейнер */
+  border-radius: 5px; /* Додає трохи округлості до зображення */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rehabilitationText:hover,
+.rehabilitationImage img:hover {
+  transform: scale(1.05); /* Ефект збільшення */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Тінь при наведенні */
+}
+
+.rehabilitationText li {
+  margin-bottom: 8px;
+}
+
+.sectionResults {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px; /* Відстань між секціями */
+}
+
+.resultsContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Стилі для зображення */
+.resultsImage {
+  flex: 1; /* Зображення займає половину ширини контейнера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%; /* Максимальна ширина зображення становить 50% сторінки */
+}
+
+.resultsImage img {
+  width: 100%; /* Зображення заповнює весь контейнер */
+  height: auto; /* Зберігає пропорції зображення */
+  object-fit: cover; /* Зберігає пропорції і заповнює контейнер */
+  border-radius: 5px; /* Додає трохи округлості до зображення */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resultsText {
+  flex: 1; /* Текст займає половину ширини */
+  padding: 20px;
+  background-color: rgb(178, 245, 190);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem;
+  overflow: hidden; /* Запобігання перекриванню тексту */
+  /* list-style: none; Прибираємо крапки зі списку */
+  padding-left: 0;
+}
+
+.resultsText {
+  padding-left: 20px;
+}
+.resultsText div {
+  margin-bottom: 8px;
+}
+.resultsText {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.resultsText:hover,
+.resultsImage img:hover {
+  transform: scale(1.05); /* Ефект збільшення */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Тінь при наведенні */
 }
 
 .sectionAugmentalis,
@@ -375,7 +498,7 @@ li {
     flex-direction: column;
   }
 
-  .textTitle,
+  /* .textTitle,
   .imgTitle img,
   .consultationText,
   .consultationImage img,
@@ -389,5 +512,5 @@ li {
   .resultsImage img {
     width: 100%;
     margin-bottom: 20px;
-  }
+  } */
 }

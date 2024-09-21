@@ -1,10 +1,16 @@
 .menu {
-  margin: 20px 0;
+  margin: 20px;
 }
 
 .menuButton {
   padding: 10px;
   cursor: pointer;
+
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #007bff;
+  border-radius: 5px;
 }
 
 .menuList {
