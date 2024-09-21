@@ -69,13 +69,55 @@ const Augmentation = () => {
       </section>
 
       <section className={styles.sectionSurgery}>
-        <h2>{augmentation.surgery.title}</h2>
+        <h2>{augmentation.surgery.title}</h2> {/* Заголовок наверху секції */}
         <div className={styles.surgeryContainer}>
-          <div className={styles.surgeryText}>
-            <p>{augmentation.surgery.description}</p>
+          <div className={styles.surgeryImages}>
+            {augmentation.surgery.image &&
+              augmentation.surgery.image.map((img, index) => (
+                <div
+                  key={index}
+                  className={`${styles.surgeryImage} ${
+                    index % 2 === 0 ? styles.even : styles.odd
+                  }`}
+                >
+                  <img src={img} alt={`Surgery process ${index + 1}`} />
+                </div>
+              ))}
           </div>
-          <div className={styles.surgeryImage}>
-            <img src={augmentation.surgery.image} alt="" />
+
+          <div className={styles.surgeryText}>
+            {augmentation.surgery.description
+              .split('\n')
+              .map((paragraph, index) => {
+                // Перевірка на заголовки секцій
+                if (
+                  paragraph.includes('Методи проведення операції') ||
+                  paragraph.includes('Способи встановлення імплантату')
+                ) {
+                  return (
+                    <p key={index} className={styles.highlightMethod}>
+                      {paragraph.trim()}
+                    </p>
+                  )
+                }
+
+                // Шукаємо назви методів
+                const methodMatch = paragraph.match(/^([А-Яа-яІіЇїЄєґ'() ]+)\./)
+                if (methodMatch) {
+                  return (
+                    <p key={index}>
+                      <span className={styles.highlightSubtitle}>
+                        <strong>{methodMatch[1]}</strong>
+                      </span>
+                      {/* Виводимо решту тексту після крапки */}
+                      {paragraph.replace(methodMatch[0], '').trim()}
+                    </p>
+                  )
+                }
+
+                // Якщо це звичайний абзац
+                return <p key={index}>{paragraph.trim()}</p>
+              })}
           </div>
         </div>
       </section>

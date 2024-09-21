@@ -2,6 +2,8 @@ import augmentationImage from '../assets/images/Augmentation.jpg'
 import consultationImage from '../assets/images/2consult.png'
 import preparationImage from '../assets/images/preparation.jpg'
 import surgeryImage from '../assets/images/surgery.jpg'
+import surgeryImage1 from '../assets/images/surgeriImage1.png'
+import surgeryImage2 from '../assets/images/surgeriImage2.jpg'
 import rehabilitationImage from '../assets/images/reabilitacion.jpg'
 import resultsImage from '../assets/images/results.jpg'
 
@@ -60,8 +62,29 @@ const operationsData = {
 
       surgery: {
         title: 'Процес операції',
-        description: 'Операція триває 2-3 години під загальним наркозом...',
-        image: surgeryImage,
+        description: `
+          Операція триває 2-3 години під загальним наркозом.
+      
+          Методи проведення операції:
+
+        Аксілярний (пахвовий).
+          Доступ до грудей здійснюється через надріз у пахвових западинах, тканини молочних залоз за такого методу операції не зачіпаються.
+
+        Параареолярний.
+          Доступ до грудей через ареоли сосків, при цьому косметичний післяопераційний рубець залишається практично непомітним, часто такий метод застосовується в поєднанні з круговою підтяжкою грудей.
+
+        Субмаммарний. 
+          Найбезпечніший метод, доступ до тканин здійснюється через розріз під грудьми в природній складці.
+      
+          Способи встановлення імплантату:
+        Під молочну залозу. 
+          Використовується вкрай рідко, встановлення імплантату можливе тільки за наявності достатнього обсягу м’яких тканин і малого розміру грудей.
+        Під грудний м’яз у двох площинах.
+          Верхня частина імплантатів опиняється під грудним м’язом, а нижня — під залозистою тканиною, що забезпечує надійний захист від промацування і зміщення.
+        Під фасцію великого грудного м’яза. 
+          Цей спосіб забезпечує додаткову фіксацію протезу завдяки зрощенню з грудним м’язом.
+        `,
+        image: [surgeryImage, surgeryImage1, surgeryImage2],
       },
       rehabilitation: {
         title: 'Реабілітація після операції',
@@ -71,6 +94,7 @@ const operationsData = {
         ],
         image: rehabilitationImage,
       },
+
       results: {
         title: 'Результати операції',
         description:
