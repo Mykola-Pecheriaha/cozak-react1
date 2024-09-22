@@ -1,24 +1,75 @@
-.menu {
-  margin: 20px;
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
 
-.menuButton {
-  padding: 10px;
-  cursor: pointer;
-
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  background-color: #007bff;
-  border-radius: 5px;
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .menuList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   padding: 0;
 }
 
+.menuItem {
+  margin: 10px;
+}
+
 .menuLink {
-  text-decoration: none;
-  color: black;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menuLink:hover {
+  background-color: #0056b3;
+}
+
+.operationDetails {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.operationTitle {
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.shortDescription {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-top: 10px;
+}
+
+.imageContainer {
+  margin: 10px 0;
+}
+
+.operationImage {
+  width: 100%;
+  height: auto;
+  max-width: 400px; /* максимальна ширина зображення */
+  border-radius: 10px;
+}
+
+.detailsLink {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: underline;
 }

@@ -4,29 +4,44 @@ import styles from './OperationsMenu.module.css'
 import operationsData from '../../data/operationsData'
 
 const OperationsMenu = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [selectedOperation, setSelectedOperation] = useState(null) // Додаємо стан для вибраної операції
 
   return (
-    <div className={styles.menu}>
-      <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className={styles.menuButton}
-      >
-        Операції
-      </button>
-      {isMenuOpen && (
-        <ul className={styles.menuList}>
-          {operationsData.operations.map((operation) => (
-            <li key={operation.title}>
-              <Link
-                to={`/operation/${encodeURIComponent(operation.title)}`}
-                className={styles.menuLink}
-              >
-                {operation.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+    <div className={styles.pageContainer}>
+      <h1 className={styles.title}>Операції</h1>
+      <ul className={styles.menuList}>
+        {operationsData.operations.map((operation) => (
+          <li key={operation.title} className={styles.menuItem}>
+            <button
+              onClick={() => setSelectedOperation(operation)}
+              className={styles.menuLink}
+            >
+              {operation.title}
+            </button>
+          </li>
+        ))}
+      </ul>
+
+      {selectedOperation && (
+        <div className={styles.operationDetails}>
+          <h3 className={styles.operationTitle}>{selectedOperation.title}</h3>
+          <p className={styles.shortDescription}>
+            {selectedOperation.shortDescription}
+          </p>
+          <div className={styles.imageContainer}>
+            <img
+              src={selectedOperation.image}
+              alt={selectedOperation.title}
+              className={styles.operationImage}
+            />
+          </div>
+          <Link
+            to={`/operation/${encodeURIComponent(selectedOperation.title)}`}
+            className={styles.detailsLink}
+          >
+            Детальніше
+          </Link>
+        </div>
       )}
     </div>
   )
