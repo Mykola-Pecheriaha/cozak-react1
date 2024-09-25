@@ -139,6 +139,8 @@ const Augmentation = () => {
         </div>
       </section>
 
+      {/* Результат */}
+
       <section className={styles.sectionResults}>
         <h2>{augmentation.results.title}</h2>
         <div className={styles.resultsContainer}>
@@ -147,6 +149,20 @@ const Augmentation = () => {
           </div>
           <div className={styles.resultsText}>
             <p>{augmentation.results.description}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Імпланти */}
+
+      <section className={styles.sectionImplants}>
+        <h2>{augmentation.implants.title}</h2>
+        <div className={styles.implantsContainer}>
+          <div className={styles.implantsText}>
+            <p>{augmentation.implants.description}</p>
+          </div>
+          <div className={styles.implantsImage}>
+            <img src={augmentation.implants.image} alt="" />
           </div>
         </div>
       </section>
