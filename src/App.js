@@ -13,10 +13,12 @@ import ConsultationsMenu from './components/ConsultationsMenu/ConsultationsMenu'
 // Нові компоненти
 import BreastSurgerySection from './components/Sections/BreastSurgerySection/BreastSurgerySection.jsx'
 import BodySurgerySection from './components/Sections/BodySurgerySection/BodySurgerySection.jsx'
-import Abdominoplasty from './components/OperationDetails/Abdominoplasty.jsx'
-import Liposuction from './components/OperationDetails/Liposuction.jsx'
-import GlutealProsthetics from './components/OperationDetails/GlutealProsthetics.jsx'
-import ScarCorrection from './components/OperationDetails/ScarCorrection.jsx'
+import Abdominoplasty from './components/Sections/BodySurgerySection/Abdominoplasty/Abdominoplasty.jsx'
+import Liposuction from './components/Sections/BodySurgerySection/Liposuction/Liposuction.jsx'
+import GlutealProsthetics from './components/Sections/BodySurgerySection/GlutealProsthetics/GlutealProsthetics.jsx'
+
+import ScarCorrection from './components/Sections/BodySurgerySection/ScarCorrection/ScarCorrection.jsx'
+
 import Augmentation from './components/Sections/BreastSurgerySection/Augmentation/Augmentation.jsx' // Додано новий компонент
 
 const App = () => {

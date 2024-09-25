@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './OperationsMenu.module.css'
 import operationsData from '../../data/operationsData'
