@@ -139,7 +139,7 @@ const operationsData = {
         description: `
           Операція полягає у видаленні надлишкової шкіри та жиру і підтяжці м’язів живота.
         `,
-        image: surgeryImage,
+        image: [surgeryImage, surgeryImage1, surgeryImage2],
       },
 
       rehabilitation: {

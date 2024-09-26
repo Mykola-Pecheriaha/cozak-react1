@@ -39,24 +39,24 @@ const Abdominoplasty = () => {
       </section>
 
       {/* Консультація */}
+
+      <h2>{consultation.title}</h2>
       {consultation && (
-        <section className={styles.sectionAbdominoplasty}>
-          <h2>{consultation.title}</h2>
-          <div className={styles.consultationContainer}>
-            <div className={styles.consultationImage}>
-              {consultation.image && <img src={consultation.image} alt="" />}
-            </div>
-            <div className={styles.consultationText}>
-              <div dangerouslySetInnerHTML={{ __html: consultation.details }} />
-            </div>
+        <section className={styles.sectionСonsultation}>
+          <div className={styles.consultationImage}>
+            {consultation.image && <img src={consultation.image} alt="" />}
+          </div>
+          <div className={styles.consultationText}>
+            <div dangerouslySetInnerHTML={{ __html: consultation.details }} />
           </div>
         </section>
       )}
 
       {/* Підготовка до операції */}
+
+      <h2>{preparation.title}</h2>
       {preparation && (
         <section className={styles.sectionPreparation}>
-          <h2>{preparation.title}</h2>
           <div className={styles.preparationContainer}>
             <div className={styles.preparationText}>
               {preparation.steps.map((step, index) => (
@@ -71,16 +71,18 @@ const Abdominoplasty = () => {
               ))}
             </div>
             <div className={styles.preparationImage}>
-              {preparation.image && <img src={preparation.image} alt="" />}
+              {preparation.image && (
+                <img src={preparation.image} alt="Preparation" />
+              )}
             </div>
           </div>
         </section>
       )}
 
       {/* Опис операції */}
+      <h2>{surgery.title}</h2>
       {surgery && (
         <section className={styles.sectionSurgery}>
-          <h2>{surgery.title}</h2>
           <div className={styles.surgeryContainer}>
             <div className={styles.surgeryImages}>
               {Array.isArray(surgery.image) ? (
@@ -121,35 +123,37 @@ const Abdominoplasty = () => {
       )}
 
       {/* Реабілітація */}
+      <h2>{rehabilitation.title}</h2>
       {rehabilitation && (
-        <section className={styles.sectionReabilitation}>
-          <h2>{rehabilitation.title}</h2>
-          <div className={styles.rehabilitationContainer}>
-            <div className={styles.rehabilitationImage}>
-              <img src={rehabilitation.image} alt="" />
-            </div>
-            <div className={styles.rehabilitationText}>
-              <ul>
-                {rehabilitation.steps.map((step, index) => (
-                  <li key={index}>{step}</li>
-                ))}
-              </ul>
-            </div>
+        <section className={styles.sectionRehabilitation}>
+          {/* Ліва частина з текстом */}
+          <div className={styles.rehabilitationText}>
+            <ul>
+              {rehabilitation.steps.map((step, index) => (
+                <li key={index}>{step}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Права частина з зображенням */}
+          <div className={styles.rehabilitationImage}>
+            <img src={rehabilitation.image} alt="Rehabilitation process" />
           </div>
         </section>
       )}
 
       {/* Результати операції */}
+      <h2>{results.title}</h2>
       {results && (
         <section className={styles.sectionResults}>
-          <h2>{results.title}</h2>
-          <div className={styles.resultsContainer}>
-            <div className={styles.resultsText}>
-              <p>{results.description}</p>
-            </div>
-            <div className={styles.resultsImage}>
-              <img src={results.image} alt="" />
-            </div>
+          {/* ліва частина з зображенням */}
+          <div className={styles.resultsImage}>
+            <img src={results.image} alt="Operation results" />
+          </div>
+
+          {/* права частина з текстом */}
+          <div className={styles.resultsText}>
+            <p>{results.description}</p>
           </div>
         </section>
       )}
