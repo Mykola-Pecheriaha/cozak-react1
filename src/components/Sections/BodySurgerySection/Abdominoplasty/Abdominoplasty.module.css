@@ -50,6 +50,18 @@ li {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Збільшена тінь при наведенні */
 }
 
+/* Стиль для тексту в подвійних лапках */
+.highlightDoubleQuote {
+  color: #0056b3; /* Колір для тексту в подвійних лапках */
+  font-weight: bold;
+}
+
+/* Стиль для тексту в одинарних лапках */
+.highlightSingleQuote {
+  color: #b35400; /* Колір для тексту в одинарних лапках */
+  font-style: italic;
+}
+
 .imgTitle {
   flex: 1; /* Зображення займає 50% банера */
   display: flex;
@@ -206,7 +218,7 @@ li {
   display: flex;
   flex-direction: column; /* Зображення розташовані зверху вниз */
   justify-content: flex-start; /* Вирівнювання зображень по верху */
-  gap: 10px; /* Відстань між зображеннями */
+  gap: 30px; /* Відстань між зображеннями */
   max-height: 100%; /* Забираємо обмеження висоти */
   overflow: hidden; /* Прибираємо прокрутку */
   padding-left: 10px; /* Додаємо відступ зліва, щоб зсунути вміст вліво */
@@ -224,12 +236,12 @@ li {
   flex: 1; /* Ліва частина: текст */
   display: flex;
   flex-direction: column; /* Текст розташовується вертикально */
-  gap: 15px; /* Відстань між параграфами */
+  gap: 10px; /* Відстань між параграфами */
   /* padding: 20px; */
   padding-left: 10px; /* Зменшення відступу зліва, щоб змістити вміст трохи вліво */
   background-color: #f9f9f9;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 0, 5px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   text-align: left; /* Вирівнювання тексту по лівому краю */
   margin-right: 20px;
 }
@@ -342,4 +354,21 @@ li {
 .resultsImage:hover img {
   transform: scale(1.1); /* Ефект збільшення при наведенні на зображення */
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* .highlightQuote {
+  color: #ea9d8c; 
+  font-weight: bold;
+} */
+
+/* Стиль для тексту в подвійних лапках */
+.highlightDoubleQuote {
+  color: #b49610; /* Колір для тексту в подвійних лапках */
+  font-weight: bold;
+}
+
+/* Стиль для тексту в одинарних лапках */
+.highlightSingleQuote {
+  color: #0092b3; /* Колір для тексту в одинарних лапках */
+  font-style: italic;
 }

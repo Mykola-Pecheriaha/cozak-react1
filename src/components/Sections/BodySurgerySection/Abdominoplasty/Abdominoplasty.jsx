@@ -31,7 +31,32 @@ const Abdominoplasty = () => {
       <h2>{title}</h2>
       <section className={styles.sectionAbdominoplasty}>
         <div className={styles.textTitle}>
-          <p>{description}</p>
+          {description.split('\n').map((paragraph, index) => {
+            // Розбиваємо на сегменти для лапок
+            const segments = paragraph
+              .split(/("[^"]*"|'[^']*')/g)
+              .map((segment, i) => {
+                // Якщо сегмент в подвійних лапках
+                if (segment.startsWith('"') && segment.endsWith('"')) {
+                  return (
+                    <span key={i} className={styles.highlightDoubleQuote}>
+                      <strong>{segment.replace(/"/g, '')}</strong>
+                    </span>
+                  )
+                }
+                // Якщо сегмент в одинарних лапках
+                if (segment.startsWith("'") && segment.endsWith("'")) {
+                  return (
+                    <span key={i} className={styles.highlightSingleQuote}>
+                      <em>{segment.replace(/'/g, '')}</em>
+                    </span>
+                  )
+                }
+                // Інакше відображаємо звичайний текст
+                return <span key={i}>{segment}</span>
+              })
+            return <p key={index}>{segments}</p>
+          })}
         </div>
         <div className={styles.imgTitle}>
           {image && <img src={image} alt={title} />}
@@ -84,6 +109,7 @@ const Abdominoplasty = () => {
       {surgery && (
         <section className={styles.sectionSurgery}>
           <div className={styles.surgeryContainer}>
+            {/* Відображення зображень операції */}
             <div className={styles.surgeryImages}>
               {Array.isArray(surgery.image) ? (
                 surgery.image.map((img, index) => (
@@ -102,20 +128,33 @@ const Abdominoplasty = () => {
                 </div>
               )}
             </div>
+            {/* Відображення опису операції з виділенням назв та тексту в лапках */}
             <div className={styles.surgeryText}>
               {surgery.description.split('\n').map((paragraph, index) => {
-                const methodMatch = paragraph.match(/^([А-Яа-яІіЇїЄєґ'() ]+)\./)
-                if (methodMatch) {
-                  return (
-                    <p key={index}>
-                      <span className={styles.highlightSubtitle}>
-                        <strong>{methodMatch[1]}</strong>
-                      </span>
-                      {paragraph.replace(methodMatch[0], '').trim()}
-                    </p>
-                  )
-                }
-                return <p key={index}>{paragraph.trim()}</p>
+                // Розбиття параграфа на сегменти з текстом в подвійних і одинарних лапках
+                const segments = paragraph
+                  .split(/("[^"]*"|'[^']*')/g)
+                  .map((segment, i) => {
+                    // Виділення тексту в подвійних лапках
+                    if (segment.startsWith('"') && segment.endsWith('"')) {
+                      return (
+                        <span key={i} className={styles.highlightDoubleQuote}>
+                          <strong>{segment.replace(/"/g, '')}</strong>
+                        </span>
+                      )
+                    }
+                    // Виділення тексту в одинарних лапках
+                    if (segment.startsWith("'") && segment.endsWith("'")) {
+                      return (
+                        <span key={i} className={styles.highlightSingleQuote}>
+                          <em>{segment.replace(/'/g, '')}</em>
+                        </span>
+                      )
+                    }
+                    // Відображення звичайного тексту
+                    return <span key={i}>{segment}</span>
+                  })
+                return <p key={index}>{segments}</p>
               })}
             </div>
           </div>
