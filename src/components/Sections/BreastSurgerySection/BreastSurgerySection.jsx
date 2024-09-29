@@ -27,6 +27,11 @@ const BreastSurgerySection = () => {
           </li>
           <li>
             <Link to={`/operation/${encodeURIComponent('reduction')}`}>
+              Видалення та заміна грудних імплантів
+            </Link>
+          </li>
+          <li>
+            <Link to={`/operation/${encodeURIComponent('reduction')}`}>
               Зменшення грудей
             </Link>
           </li>

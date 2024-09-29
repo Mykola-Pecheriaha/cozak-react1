@@ -1,0 +1,452 @@
+.hernioplastyContainer {
+  width: 100%;
+  /* margin: 20px; */
+  max-width: 100vw;
+  /* overflow-x: hidden; */
+  padding: 20px;
+  margin: 0 auto;
+  /* Центрування сторінки */
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+
+li {
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+
+.sectionHernioplasty {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px; /* Відстань між зображенням і текстом */
+  padding: 20px;
+  background-color: #9af09f;
+  margin-bottom: 40px;
+  overflow: hidden; /* Запобігає виходу елементів за межі контейнера */
+}
+
+.textTitle {
+  flex: 1; /* Текст займає 50% ширини секції */
+  padding: 20px;
+  background-color: rgb(246, 248, 197);
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Ледь помітна рамка */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тінь */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація для збільшення тексту та тіні */
+  font-size: 1.2rem; /* Збільшення розміру тексту */
+  overflow: hidden; /* Запобігання перекриванню тексту */
+}
+
+.textTitle:hover {
+  transform: scale(1.05); /* Ефект збільшення при наведенні */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Збільшена тінь при наведенні */
+}
+
+/* Стиль для тексту в подвійних лапках */
+.highlightDoubleQuote {
+  color: #0056b3; /* Колір для тексту в подвійних лапках */
+  font-weight: bold;
+}
+
+/* Стиль для тексту в одинарних лапках */
+.highlightSingleQuote {
+  color: #b35400; /* Колір для тексту в одинарних лапках */
+  font-style: italic;
+}
+
+.imgTitle {
+  flex: 1; /* Зображення займає 50% банера */
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.imgTitle img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Запобігання виходу зображення */
+}
+
+.imgTitle:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* консультація   */
+
+.sectionСonsultation {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px;
+  background-color: #9af09f;
+  margin-bottom: 40px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.consultationText {
+  flex: 1; /* Текст займає 50% ширини секції */
+  padding: 20px 10px 20px 20px; /* Зміщення тексту вліво */
+  background-color: rgb(246, 248, 197);
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Ледь помітна рамка */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тінь */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація для збільшення тексту та тіні */
+  font-size: 1.2rem; /* Збільшення розміру тексту */
+  /* overflow: hidden; Запобігання перекриванню тексту */
+}
+
+.consultationText:hover {
+  transform: scale(1.05); /* Ефект збільшення при наведенні */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Збільшена тінь при наведенні */
+}
+
+.consultationImage {
+  flex: 1; /* Зображення займає 50% банера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.consultationImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація при наведенні */
+}
+
+.consultationImage:hover img {
+  transform: scale(1.1); /* Ефект збільшення зображення при наведенні */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Тінь під час збільшення */
+}
+
+/* підготовка */
+
+.sectionPreparation {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px;
+  background-color: #acf690;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.preparationContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px; /* Відстань між текстом і зображенням */
+  width: 100%; /* Розтягнути контейнер на всю ширину */
+}
+
+.preparationText {
+  flex: 1; /* Текст займає ліву половину */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Відстань між рядками тексту */
+  padding: 20px;
+  background-color: rgb(246, 248, 197);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  text-align: left; /* Вирівнювання тексту по лівому краю */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preparationText div {
+  line-height: 1.5; /* Міжрядковий інтервал для поліпшення читабельності */
+}
+
+.preparationText:hover {
+  transform: scale(1.05); /* Ефект збільшення тексту при наведенні */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Тінь при збільшенні */
+}
+
+.preparationImage {
+  flex: 1; /* Зображення займає праву половину */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding-left: 20px;
+  margin-right: 20px;
+}
+
+.preparationImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавна анімація */
+}
+
+.preparationImage:hover img {
+  transform: scale(1.1); /* Ефект збільшення зображення при наведенні */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Тінь при збільшенні */
+}
+
+/* операція */
+
+.sectionSurgery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #9af09f;
+}
+
+.sectionSurgery h2 {
+  text-align: center; /* Заголовок вирівняно по центру */
+  margin-bottom: 20px;
+}
+
+.surgeryContainer {
+  display: flex; /* Дві частини: текст і зображення */
+  gap: 20px; /* Відстань між ними */
+  align-items: flex-start; /* Вирівнювання по верхньому краю */
+}
+
+.surgeryImages {
+  flex: 1; /* Права частина: зображення */
+  display: flex;
+  flex-direction: column; /* Зображення розташовані зверху вниз */
+  justify-content: flex-start; /* Вирівнювання зображень по верху */
+  gap: 30px; /* Відстань між зображеннями */
+  max-height: 100%; /* Забираємо обмеження висоти */
+  overflow: hidden; /* Прибираємо прокрутку */
+  padding-left: 10px; /* Додаємо відступ зліва, щоб зсунути вміст вліво */
+  margin-right: 20px;
+}
+
+.surgeryImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.surgeryText {
+  flex: 1; /* Ліва частина: текст */
+  display: flex;
+  flex-direction: column; /* Текст розташовується вертикально */
+  gap: 10px; /* Відстань між параграфами */
+  /* padding: 20px; */
+  padding-left: 10px; /* Зменшення відступу зліва, щоб змістити вміст трохи вліво */
+  background-color: #f9f9f9;
+  border: 0, 5px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: left; /* Вирівнювання тексту по лівому краю */
+  margin-right: 20px;
+}
+
+.surgeryText p {
+  margin: 10px; /* Забрати додаткові відступи параграфів */
+}
+
+.surgeryText:hover,
+.surgeryImage:hover {
+  transform: scale(1.05); /* Ефект наближення при наведенні */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Збільшення тіні при наведенні */
+}
+
+/* Секція реабілітації */
+.sectionRehabilitation {
+  display: flex; /* Розділити на дві частини */
+  justify-content: space-between;
+  gap: 40px; /* Відстань між текстом і зображенням */
+  padding: 20px;
+  background-color: #9af09f;
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+
+/* Ліва частина з текстом */
+.rehabilitationText {
+  flex: 1; /* Текст займає 50% ширини секції */
+  padding: 20px;
+  background-color: rgb(246, 248, 197);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rehabilitationText:hover {
+  transform: scale(1.05); /* Ефект збільшення при наведенні на текст */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Права частина з зображенням */
+.rehabilitationImage {
+  flex: 1; /* Зображення займає 50% ширини секції */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Запобігає виходу зображення за межі */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rehabilitationImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rehabilitationImage:hover img {
+  transform: scale(1.1); /* Ефект збільшення при наведенні на зображення */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Основний контейнер секції результатів */
+.sectionResults {
+  display: flex; /* Використовуємо flex для поділу на дві частини */
+  justify-content: space-between;
+  gap: 40px; /* Відстань між текстом і зображенням */
+  padding: 20px;
+  background-color: #9af09f;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Додаємо плавні переходи */
+  margin-right: 20px;
+}
+
+/* Ліва частина з текстом */
+.resultsText {
+  flex: 1; /* Текст займає 50% ширини секції */
+  padding: 20px;
+  background-color: rgb(246, 248, 197);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resultsText:hover {
+  transform: scale(1.05); /* Ефект збільшення при наведенні на текст */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Права частина з зображенням */
+.resultsImage {
+  flex: 1; /* Зображення займає 50% ширини секції */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Запобігає виходу зображення за межі */
+}
+
+.resultsImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resultsImage:hover img {
+  transform: scale(1.1); /* Ефект збільшення при наведенні на зображення */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* .highlightQuote {
+  color: #ea9d8c; 
+  font-weight: bold;
+} */
+
+/* Стиль для тексту в подвійних лапках */
+.highlightDoubleQuote {
+  color: #b49610; /* Колір для тексту в подвійних лапках */
+  font-weight: bold;
+}
+
+/* Стиль для тексту в одинарних лапках */
+.highlightSingleQuote {
+  color: #0092b3; /* Колір для тексту в одинарних лапках */
+  font-style: italic;
+}
+
+/* стилі імпланти, */
+
+.sectionImplants {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px; /* Відстань між секціями */
+  padding-right: 40px;
+  background-color: #9af09f;
+}
+
+.implantsContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Стилі для зображення */
+.implantsImage {
+  flex: 1; /* Зображення займає половину ширини контейнера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%; /* Максимальна ширина зображення становить 50% сторінки */
+}
+
+.implantsImage img {
+  width: 95%; /* Зображення заповнює весь контейнер */
+  height: auto; /* Зберігає пропорції зображення */
+  object-fit: cover; /* Зберігає пропорції і заповнює контейнер */
+  border-radius: 5px; /* Додає трохи округлості до зображення */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.implantsText {
+  flex: 1; /* Текст займає половину ширини */
+  padding: 20px;
+  background-color: rgb(178, 245, 190);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem;
+  overflow: hidden; /* Запобігання перекриванню тексту */
+  /* list-style: none; Прибираємо крапки зі списку */
+  padding-left: 0;
+}
+
+.implantsText {
+  padding-left: 20px;
+}
+.implantsText div {
+  margin-bottom: 8px;
+}
+.implantsText {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.implantsText:hover,
+.implantsImage img:hover {
+  transform: scale(1.05); /* Ефект збільшення */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Тінь при наведенні */
+}
+
+.highlightSingleQuote {
+  font-style: italic;
+  color: red; /* Колір для тексту в одинарних лапках */
+}
+
+.highlightDoubleQuote {
+  font-weight: bold;
+  color: blue; /* Колір для тексту в подвійних лапках */
+}

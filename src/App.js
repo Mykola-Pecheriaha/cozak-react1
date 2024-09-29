@@ -21,6 +21,8 @@ import ScarCorrection from './components/Sections/BodySurgerySection/ScarCorrect
 
 import Augmentation from './components/Sections/BreastSurgerySection/Augmentation/Augmentation.jsx' // Додано новий компонент
 
+import Hernioplasty from './components/Sections/BodySurgerySection/Hernioplasty/Hernioplasty.jsx'
+
 const App = () => {
   return (
     <Router>
@@ -59,6 +61,7 @@ const App = () => {
 
         {/* Операції на тілі */}
         <Route path="/operation/abdominoplasty" element={<Abdominoplasty />} />
+        <Route path="/operation/hernioplasty" element={<Hernioplasty />} />
         <Route path="/operation/liposuction" element={<Liposuction />} />
         <Route
           path="/operation/gluteal-prosthetics"

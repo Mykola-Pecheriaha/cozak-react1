@@ -18,6 +18,11 @@ const BodySurgerySection = () => {
             <Link to="/operation/abdominoplasty">Абдомінопластика</Link>
           </li>
           <li>
+            <Link to="/operation/hernioplasty">
+              Герніопластика - операції при грижах.
+            </Link>
+          </li>
+          <li>
             <Link to="/operation/liposuction">Корекційна ліпосакція</Link>
           </li>
           <li>
